@@ -1,16 +1,25 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import hello from "./store";
 
+// React Redux
+import { Provider } from "react-redux";
+
+// Routes
+import Routes from "./routes/Routes"
+
+// Styles Scss
+import "./assets/globals.scss"
+
+// Store
+import hello from "./store";
 const store = hello();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App/>
+    <Routes/>
   </Provider>
 );
 

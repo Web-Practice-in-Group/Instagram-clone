@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass", // Regex for Component Factory to use,
+            // default to "createReactClass"
+            "pragma": "React", // Pragma to use, default to "React"
+            "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+            "version": "detect" // React version. "detect" automatically picks the version you have installed.
+        },
+        "linkComponents": [
+            // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+            "Hyperlink",
+            {
+                "name": "Link",
+                "linkAttribute": "to"
+            }
+        ]
+    }
+}
