@@ -7,19 +7,19 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 
 // Routes
-import Routes from "./routes/Routes"
+import Routers from "./routers/Routers"
 
 // Styles Scss
 import "./assets/globals.scss"
 
 // Store
-import hello from "./store";
-const store = hello();
+import Insta from "./store";
+const store = Insta();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <Routes/>
+    <Routers/>
   </Provider>
 );
 
