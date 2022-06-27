@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Todo:Components
-import Navigation from "../components/Navigation";
+import Navigation from "../components/Nav/Navigation";
 
 // *Routes
 import HomePage from "../pages/HomePage";

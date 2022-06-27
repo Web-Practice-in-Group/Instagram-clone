@@ -5,6 +5,9 @@ Collaboration project of React
 Using Api web:
 https://jsonplaceholder.typicode.com/
 
+Beautiful, fast and modern React UI library:
+https://nextui.org/
+
 ## Download
 
 Computer Version:
