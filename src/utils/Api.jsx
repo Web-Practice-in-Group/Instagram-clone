@@ -1,32 +1,18 @@
-class Api {
-  constructor(url) {
-    this.url = url;
-    this.headers = new Headers({
-      "Content-Type": "application/json",
+import axios from "axios";
+
+export default (route = "") => {
+  let url = "";
+  if (route == "1") {
+    url = "https://jsonplaceholder.typicode.com/";
+  } else {
+    url = "https://jsonplaceholder.typicode.com/";
+  }
+
+  return axios.create({
+    baseURL: url,
+    headers: {
       Accept: "application/json",
-    });
-  }
-
-  getAsync(id = "") {
-    return fetch(this.url + id, {
-      method: "GET",
-      headers: this.headers,
-    });
-  }
-
-  async getSync(id = "") {
-    try {
-      const data = await (
-        await fetch(this.url + id, {
-          method: "GET",
-          headers: this.headers,
-        })
-      ).json();
-      return data;
-    } catch (error) {
-      return error;
-    }
-  }
-}
-
-export default Api;
+      "Content-Type": "application/json",
+    },
+  });
+};
