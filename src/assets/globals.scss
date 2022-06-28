@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, ui-sans-serif,
@@ -10,3 +11,5 @@ body {
 code {
   font-family: font-face monospace;
 }
+
+
