@@ -8,6 +8,31 @@ https://jsonplaceholder.typicode.com/
 Beautiful, fast and modern React UI library:
 https://nextui.org/
 
+Axios:
+How to import and use hooks;
+```javascript
+import React, { useEffect, useState } from "react";
+import Api from "../utils/Api";
+
+const [list, setList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        Api()
+          .get("posts")
+          .then((res) => {
+            setList(res.data);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, [setList]);
+```
+
 ## Download
 
 Computer Version:

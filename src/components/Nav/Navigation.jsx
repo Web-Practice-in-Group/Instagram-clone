@@ -1,10 +1,11 @@
-import React from 'react';
-import Like from '../Breadcrumbs/Icons/Like';
+import React from "react";
 
-function Navigation(){
-    return(
-        <div><Like/></div>
-    )
+function Navigation() {
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 }
 
 export default Navigation;
