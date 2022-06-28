@@ -2,18 +2,19 @@ import React from "react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme } from "@nextui-org/react";
 
-function DarkMode() {
+function DarkMode({ setMode }) {
   const ThemeChanger = () => {
     const { setTheme } = useNextTheme();
-    const { isDark, type } = useTheme();
+    const { isDark } = useTheme();
+
+    const handleChange = (e) => {
+      setTheme(e.target.checked ? "dark" : "light");
+      setMode(e.target.checked ? "white" : "black");
+    };
 
     return (
       <div>
-        The current theme is: {type}
-        <Switch
-          checked={isDark}
-          onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
-        />
+        <Switch checked={isDark} onChange={handleChange} />        
       </div>
     );
   };

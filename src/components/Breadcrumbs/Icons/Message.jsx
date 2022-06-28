@@ -1,15 +1,18 @@
 import * as React from "react";
 
-function Message(props) {
+function Message(
+  props,
+  { color = "#262626", fill = "#262626", height = 24, width = 24 }
+) {
   return (
     <svg
       aria-label="Messenger"
       className="_ab6-"
-      color="#fafafa"
-      fill="#fafafa"
-      height={24}
+      color={color}
+      fill={fill}
+      height={height}
       viewBox="0 0 24 24"
-      width={24}
+      width={width}
       {...props}
     >
       <path
