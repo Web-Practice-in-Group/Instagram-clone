@@ -12,12 +12,12 @@ import NotFoundPage from "../pages/NotFoundPage";
 import Parent from "../pages/Test/Props/Parent";
 
 // !Loader
-import { PageLoader } from "../components/Loaders/PageLoader";
+// import { PageLoader } from "../components/Loaders/PageLoader";
 
 function Routers() {
   return (
     <main>
-      <PageLoader  />
+      {/* <PageLoader  /> */}
       <Router>
         <Navigation />
         <Routes>
