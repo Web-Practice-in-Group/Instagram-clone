@@ -1,14 +1,9 @@
 import React from "react";
-import { Div, Span } from "../../assets/Elements";
 
 export const PageLoader = () => {
   return (
-    <Div>
-      <div>
-        <Span>
-          <span></span>
-        </Span>
-      </div>
-    </Div>
+    <div>
+      <h1>PageLoader</h1>
+    </div>
   );
 };

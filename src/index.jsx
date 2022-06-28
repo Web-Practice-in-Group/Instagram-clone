@@ -20,6 +20,11 @@ const lightTheme = createTheme({
 
 const darkTheme = createTheme({
   type: "dark",
+  theme: {
+    colors: {   // Custom colors
+      background: "#121212",
+    },
+  },
 });
 
 // Styles Scss
