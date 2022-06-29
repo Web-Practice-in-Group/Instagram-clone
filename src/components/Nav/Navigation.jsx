@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import DarkMode from "../DarkMode/DarkMode";
 // *SearchBar
 import Search from "./Search";
-// Button
+// *Button
 import NavButton from "../Buttons/Button";
+// *Avatars
+import Avatars from "../Breadcrumbs/Avatars";
 
 // ?Iconos
 import {
@@ -16,7 +18,6 @@ import {
   NewIcon,
   ModIcon,
   LikeIcon,
-  UserIcon,
   InstagramIcon,
 } from "../Breadcrumbs/Icons";
 
@@ -32,11 +33,13 @@ import {
 } from "../../assets/Elements";
 
 function Navigation() {
+
   const [mode, setMode] = useState();
   const [background, setBackground] = useState();
 
-  if (mode == undefined) {
+  if (mode === undefined) {
     setMode("black");
+    setBackground("white");
   }
 
   return (
@@ -63,7 +66,7 @@ function Navigation() {
                 <NewIcon color={mode} />
                 <ModIcon color={mode} fill={mode} />
                 <LikeIcon fill={mode} />
-                <UserIcon fill={mode} />
+                <Avatars size="sm"/>
               </NavAction>
             </Col>
             <Col size="1" collapse="xs">

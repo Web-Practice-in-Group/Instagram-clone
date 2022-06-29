@@ -8,6 +8,7 @@ import User from "./Icons/User";
 import Instagram from "./Icons/Instagram";
 import New from "./Icons/New";
 import Mod from "./Icons/Mod";
+import Send from "./Icons/Send";
 
 export const CommentIcon = Comment;
 export const DotsIcon = Dots;
@@ -19,3 +20,4 @@ export const UserIcon = User;
 export const InstagramIcon = Instagram;
 export const NewIcon = New;
 export const ModIcon = Mod;
+export const SendIcon = Send;

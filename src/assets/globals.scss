@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +11,14 @@ body {
 
 code {
   font-family: font-face monospace;
+}
+
+svg:hover {
+  fill: #424242;
+  color: #424242;
+  cursor: pointer;
+}
+
+img {
+  width: 30%;
 }
