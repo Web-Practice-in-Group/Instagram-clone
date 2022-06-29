@@ -1,43 +1,49 @@
 import React from "react";
 import Instagram from "../Breadcrumbs/Icons/Instagram";
 import ImgLogin from "../Breadcrumbs/Icons/ImgLogin";
+import NavButton from "../Buttons/Button";
+import {
+  LoginContainer,
+  Loginform,
+  LoginformInput,
+  LoginImagen,
+} from "../../assets/Elements";
 
 function Login() {
   return (
-    <div>     
-      <section>
-        <article>
-          <div className="imgLogin">
-            <ImgLogin/>
-          </div>
+    <>
+      <LoginContainer>
+        <LoginImagen>
+          <ImgLogin />
+        </LoginImagen>
+        <Loginform>
           <div>
-            <div>
-              login
-              <div className="letras">
-                <Instagram />
-              </div>
-              <form action="">
-                <input
-                  type="text"
-                  className="usuario"
-                  id="usuario"
-                  placeholder="Usuario"
-                />
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Contraseña"
-                />
-                <button type="submit">Iniciar sesión</button>
-              </form>
-            </div>
-            <div>crear cuenta</div>
+            <Instagram />
           </div>
-        </article>
-      </section>
+          <LoginformInput>
+            <input
+              type="text"
+              className="usuario"
+              id="usuario"
+              placeholder="Usuario"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Contraseña"
+            />
+            <NavButton
+              color="#fff"
+              background="#0095f6"
+              name="Iniciar Sesion"
+            />
+          </LoginformInput>
+          <div>crear cuenta</div>
+        </Loginform>
+      </LoginContainer>
       <footer></footer>
-    </div>
+    </>
   );
 }
 

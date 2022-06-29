@@ -61,3 +61,116 @@ export const NavButton = styled.button`
 export const Container = styled.div`
   padding: 100px 50px 0 50px;
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const LoginContainer = styled.div`
+  margin: 32px auto 0;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+export const LoginPosicion = styled.article`
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+export const LoginImagen = styled.div`
+margin: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+export const Loginform = styled.div`
+margin: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+export const LoginformInput = styled.form`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+`;
