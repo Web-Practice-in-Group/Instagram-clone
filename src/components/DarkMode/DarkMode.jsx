@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme as useNextTheme } from "next-themes";
 import { Switch, useTheme } from "@nextui-org/react";
 
-function DarkMode({ setMode }) {
+function DarkMode({ setMode, setBackground }) {
   const ThemeChanger = () => {
     const { setTheme } = useNextTheme();
     const { isDark } = useTheme();
@@ -10,6 +10,7 @@ function DarkMode({ setMode }) {
     const handleChange = (e) => {
       setTheme(e.target.checked ? "dark" : "light");
       setMode(e.target.checked ? "white" : "black");
+      setBackground(e.target.checked ? "black" : "white");
     };
 
     return (

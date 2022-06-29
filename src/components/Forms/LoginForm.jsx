@@ -1,11 +1,10 @@
 import React from "react";
-import Letra from "../../components/Breadcrumbs/Icons/Letra";
-import ImgLogin from "../../components/Breadcrumbs/Icons/ImgLogin";
+import Instagram from "../Breadcrumbs/Icons/Instagram";
+import ImgLogin from "../Breadcrumbs/Icons/ImgLogin";
 
 function Login() {
   return (
-    <div>
-      <hr />
+    <div>     
       <section>
         <article>
           <div className="imgLogin">
@@ -15,7 +14,7 @@ function Login() {
             <div>
               login
               <div className="letras">
-                <Letra />
+                <Instagram />
               </div>
               <form action="">
                 <input

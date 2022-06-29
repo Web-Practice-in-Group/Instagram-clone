@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Grid = styled.div``;
 export const Row = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
 `;
 
 const media = {
@@ -15,33 +18,46 @@ export const Col = styled.div`
 `;
 
 // Navbar
-export const ContainerNav = styled.nav`
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  flex-direction: column;
-  
-  display: flex;
-  top: 0;
+export const NavContainer = styled.div`
+  border-bottom: 1px solid rgb(220, 220, 220);
+  position: fixed;
+  padding: 10px;
   width: 100%;
+  background: ${(props) => (props.primary ? props.primary : "#fff")};
 `;
 
-export const LogoNav = styled.div`
+export const Navbar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #000;
-  border-bottom: 1px solid grey;
-  border-top: 1px solid grey;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  border-radius: 10px;
+`;
+
+export const NavLogo = styled.div`
+  padding-top: 15px;
+`;
+export const NavSearch = styled.div`
+  flex: ${(props) => props.size};
+  ${(props) => props.collapse && media[props.collapse](`display: none;`)}
+`;
+export const NavAction = styled.div`
+  display: flex;
+  gap: 18px;
+`;
+
+// Button
+export const NavButton = styled.button`
+  background-color: ${(props) =>
+    props.background ? props.background : "#fff"};
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px 9px;
+  font-size: 14px;
+  color: ${(props) => (props.color ? props.color : "#fff")};
+  text-align: center;
+  font-weight: 600;
   cursor: pointer;
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
+`;
+
+export const Container = styled.div`
+  padding: 100px 50px 0 50px;
 `;

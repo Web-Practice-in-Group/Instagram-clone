@@ -6,6 +6,8 @@ import Message from "./Icons/Message";
 import Save from "./Icons/Save";
 import User from "./Icons/User";
 import Instagram from "./Icons/Instagram";
+import New from "./Icons/New";
+import Mod from "./Icons/Mod";
 
 export const CommentIcon = Comment;
 export const DotsIcon = Dots;
@@ -15,3 +17,5 @@ export const MessageIcon = Message;
 export const SaveIcon = Save;
 export const UserIcon = User;
 export const InstagramIcon = Instagram;
+export const NewIcon = New;
+export const ModIcon = Mod;

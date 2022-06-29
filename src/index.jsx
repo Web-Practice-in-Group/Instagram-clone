@@ -23,6 +23,17 @@ const darkTheme = createTheme({
   theme: {
     colors: {   // Custom colors
       background: "#121212",
+
+      primaryLight: '#262626',
+      primaryLightHover: '#262626',
+      primaryLightActive: '#262626',
+      primaryLightContrast: '#262626',
+      primary: '#262626',
+      primaryBorder: '#262626',
+      primaryBorderHover: '#262626',
+      primarySolidHover: '#262626',
+      primarySolidContrast: '$white',
+      primaryShadow: '#262626',
     },
   },
 });
