@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-export const Grid = styled.div``;
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
@@ -19,7 +18,7 @@ export const Col = styled.div`
 
 // Navbar
 export const NavContainer = styled.div`
-  border-bottom: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid #E6E8EB;
   position: fixed;
   padding: 10px;
   width: 100%;
@@ -60,4 +59,28 @@ export const NavButton = styled.button`
 
 export const Container = styled.div`
   padding: 100px 50px 0 50px;
+`;
+
+// Card
+export const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CardContent = styled.div`
+  border: 1px solid #E6E8EB;
+  width: 470px;
+  height: auto;
+  border-radius: 6px;
+`;
+
+export const CardImage = styled.div`
+  padding-top: 5px;
+  border-radius: 2px;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  background: url(${(props) => props.src});
 `;
