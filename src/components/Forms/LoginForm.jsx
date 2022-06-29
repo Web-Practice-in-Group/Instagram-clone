@@ -2,6 +2,7 @@ import React from "react";
 import Instagram from "../Breadcrumbs/Icons/Instagram";
 import ImgLogin from "../Breadcrumbs/Icons/ImgLogin";
 import NavButton from "../Buttons/Button";
+import Input from "../Inputs/Input";
 import {
   LoginContainer,
   Loginform,
@@ -21,18 +22,8 @@ function Login() {
             <Instagram />
           </div>
           <LoginformInput>
-            <input
-              type="text"
-              className="usuario"
-              id="usuario"
-              placeholder="Usuario"
-            />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Contraseña"
-            />
+            <Input type="text" name="email" placeholder="Usuario" />
+            <Input type="password" name="password" placeholder="Contraseña" />
             <NavButton
               color="#fff"
               background="#0095f6"
