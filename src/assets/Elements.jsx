@@ -75,8 +75,7 @@ export const Buttons = styled.button`
   width: ${(props) => (props.width ? props.width : "auto")};
 
   &:active {
-    background-color: ${(props) =>
-      props.background ? props.active : "#fff"};
+    background-color: ${(props) => (props.background ? props.active : "#fff")};
   }
 `;
 //Input
@@ -167,4 +166,164 @@ export const Logo = styled.div`
   background: cover no-repeat;
   text-align: center;
   margin: 14.45px auto 12px;
+`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const FooterContent = styled.footer`
+  order: 5;
+  padding: 0 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-box-ordinal-group: 6;
+`;
+
+export const FooterContainer = styled.div`
+  margin-bottom: 52px;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  aling-items: stretch;
+  align-content: stretch;
+  display: flex;
+`;
+
+export const FooterCont = styled.div`
+  margin-top: 24px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+`;
+
+export const FooterDiv = styled.div`
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+`;
+
+export const FooterContentLink = styled.div`
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 12px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+`;
+
+export const FooterLink = styled.a`
+  color: rgba(var(--fe0, 0, 55, 107), 1);
+  text-decoration: none;
+`;
+
+export const FooterLinkText = styled.div`
+  display: block;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin: -2px 0 -3px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+`;
+
+export const FooterCopy = styled.div`
+  margin-top: 12px;
+  margin-bottom: 12px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
 `;

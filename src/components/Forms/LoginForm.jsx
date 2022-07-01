@@ -12,10 +12,12 @@ import {
   Row,
   Col,
 } from "../../assets/Elements";
+import Footer from "../Footer/Footer";
 
 function LoginForm() {
   return (
-    <CardContainer>
+    <>
+        <CardContainer>
       <Row>
         <Col>
           <AuthContainer>
@@ -55,6 +57,8 @@ function LoginForm() {
         </Col>
       </Row>
     </CardContainer>
+    <Footer />
+    </>
   );
 }
 
