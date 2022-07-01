@@ -12,6 +12,26 @@ export const Row = styled.div`
   gap: 25px;
   padding-left: ${(props) => props.pl}px;
   padding-right: ${(props) => props.pr}px;
+  padding-top: ${(props) => props.pt}px;
+  padding-bottom: ${(props) => props.pb}px;
+  border-bottom: 1px solid ${(props) => props.border};
+
+  h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 14px;
+  }
+  br {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const media = {
@@ -64,7 +84,7 @@ export const NavAction = styled.div`
 export const Buttons = styled.button`
   background-color: ${(props) =>
     props.background ? props.background : "#fff"};
-  border: 1px solid transparent;
+  border: 1px solid ${(props) => (props.border ? props.border : "#fff")};
   border-radius: 4px;
   padding: 5px 9px;
   font-size: 14px;
@@ -167,4 +187,50 @@ export const Logo = styled.div`
   background: cover no-repeat;
   text-align: center;
   margin: 14.45px auto 12px;
+`;
+
+// Modal
+export const Overlay = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: ${(props) =>
+    props.showOverlay ? "rgba(0,0,0,.5)" : "rgba(0,0,0,0)"};
+  padding: 40px;
+  display: flex;
+  align-items: ${(props) =>
+    props.positionModal ? props.positionModal : "center"};
+  justify-content: center;
+`;
+
+export const ModalContainer = styled.div`
+  width: 440px;
+  height: auto;
+  background: #262626;
+  position: relative;
+  border-radius: 10px;
+`;
+
+export const ModalText = styled.div`
+  padding-left: 22px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+export const ModalClose = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
+
+// Button close modal
+export const Close = styled.div`
+  cursor: pointer;
+`;
+
+// Content of modal
+export const ContentModal = styled.div`
+  padding: 10px;
 `;

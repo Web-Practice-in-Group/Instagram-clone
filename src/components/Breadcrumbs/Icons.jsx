@@ -9,6 +9,7 @@ import Instagram from "./Icons/Instagram";
 import New from "./Icons/New";
 import Mod from "./Icons/Mod";
 import Send from "./Icons/Send";
+import Close from "./Icons/Close";
 
 export const CommentIcon = Comment;
 export const DotsIcon = Dots;
@@ -21,3 +22,4 @@ export const InstagramIcon = Instagram;
 export const NewIcon = New;
 export const ModIcon = Mod;
 export const SendIcon = Send;
+export const CloseIcon = Close;

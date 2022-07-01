@@ -16,7 +16,7 @@ import {
 function LoginForm() {
   return (
     <CardContainer>
-      <Row>
+      <Row border="transparent">
         <Col>
           <AuthContainer>
             <AuthCard>
@@ -38,6 +38,7 @@ function LoginForm() {
                   placeholder="Contraseña"
                 ></Input>
                 <Button
+                  border="transparent"
                   margin="10px 0 0 0"
                   color="#fff"
                   active="#0167ac"

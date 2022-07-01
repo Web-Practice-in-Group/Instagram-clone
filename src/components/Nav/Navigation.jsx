@@ -46,7 +46,7 @@ function Navigation() {
     <>
       <NavContainer primary={background}>
         <Navbar>
-          <Row>
+          <Row border="transparent">
             <Col size="1">
               <NavLogo>
                 <Link to="/">
@@ -61,7 +61,7 @@ function Navigation() {
             </Col>
             <Col size="2">
               <NavAction>
-                <HomeIcon fill={mode} />
+                <HomeIcon color={mode} />
                 <MessageIcon color={mode} fill={mode} />
                 <NewIcon color={mode} />
                 <ModIcon color={mode} fill={mode} />
@@ -81,6 +81,7 @@ function Navigation() {
                     color="#fff"
                     background="#0095f6"
                     name="Iniciar Sesion"
+                    border="transparent"
                   />
                 </Link>
                 <Link to="/auth/register">
@@ -88,6 +89,7 @@ function Navigation() {
                     color="#0095f6"
                     background="#fff"
                     name="Registrarse"
+                    border="transparent"
                   />
                 </Link>
               </NavAction>
