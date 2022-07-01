@@ -73,10 +73,10 @@ export const Buttons = styled.button`
   font-weight: 600;
   cursor: pointer;
   width: ${(props) => (props.width ? props.width : "auto")};
+  margin: ${(props) => (props.margin ? props.margin : "0")};
 
   &:active {
-    background-color: ${(props) =>
-      props.background ? props.active : "#fff"};
+    background-color: ${(props) => (props.background ? props.active : "#fff")};
   }
 `;
 //Input
