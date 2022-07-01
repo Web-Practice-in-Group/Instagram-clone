@@ -1,6 +1,6 @@
 import React from "react";
 import Instagram from "../Breadcrumbs/Icons/Instagram";
-import Buttons from "../Buttons/Button";
+import Button from "../Buttons/Button";
 import Input from "../Inputs/Input";
 
 import {
@@ -28,10 +28,10 @@ function LoginForm() {
 
               <InputContainer>
                 <Input
-                  type="username"
-                  name="username"
-                  id="username"
-                  placeholder="Username"
+                  type="user"
+                  name="user"
+                  id="user"
+                  placeholder="Usuario o correo electronico"
                 ></Input>
                 <Input
                   type="password"
@@ -39,7 +39,9 @@ function LoginForm() {
                   id="password"
                   placeholder="Contraseña"
                 ></Input>
-                <Buttons
+                <Button
+                  border="transparent"
+                  margin="10px 0 0 0"
                   color="#fff"
                   active="#0167ac"
                   background="#0095f6"
