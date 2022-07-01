@@ -7,7 +7,7 @@ import DarkMode from "../DarkMode/DarkMode";
 // *SearchBar
 import Search from "./Search";
 // *Button
-import NavButton from "../Buttons/Button";
+import Buttons from "../Buttons/Button";
 // *Avatars
 import Avatars from "../Breadcrumbs/Avatars";
 
@@ -54,7 +54,7 @@ function Navigation() {
                 </Link>
               </NavLogo>
             </Col>
-            <Col size="4" collapse="xs">
+            <Col size="4" collapse="md">
               <NavSearch>
                 <Search />
               </NavSearch>
@@ -74,17 +74,17 @@ function Navigation() {
                 <DarkMode setMode={setMode} setBackground={setBackground} />
               </NavAction>
             </Col>
-            <Col size="5" collapse="xs">
+            <Col size="5" collapse="md">
               <NavAction>
                 <Link to="/auth/login">
-                  <NavButton
+                  <Buttons
                     color="#fff"
                     background="#0095f6"
                     name="Iniciar Sesion"
                   />
                 </Link>
                 <Link to="/auth/register">
-                  <NavButton
+                  <Buttons
                     color="#0095f6"
                     background="#fff"
                     name="Registrarse"

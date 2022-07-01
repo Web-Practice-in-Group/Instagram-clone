@@ -1,40 +1,50 @@
 import React from "react";
 import Instagram from "../Breadcrumbs/Icons/Instagram";
-import ImgLogin from "../Breadcrumbs/Icons/ImgLogin";
-import NavButton from "../Buttons/Button";
-import Input from "../Inputs/Input";
+import Buttons from "../Buttons/Button";
+
 import {
-  LoginContainer,
-  Loginform,
-  LoginformInput,
-  LoginImagen,
+  CardContainer,
+  AuthCard,
+  AuthContainer,
+  Logo,
+  InputContainer,
+  Input,
+  Row,
+  Col,
 } from "../../assets/Elements";
 
 function Login() {
   return (
-    <>
-      <LoginContainer>
-        <LoginImagen>
-          <ImgLogin />
-        </LoginImagen>
-        <Loginform>
-          <div>
-            <Instagram />
-          </div>
-          <LoginformInput>
-            <Input type="text" name="email" placeholder="Usuario" />
-            <Input type="password" name="password" placeholder="Contraseña" />
-            <NavButton
-              color="#fff"
-              background="#0095f6"
-              name="Iniciar Sesion"
-            />
-          </LoginformInput>
-          <div>crear cuenta</div>
-        </Loginform>
-      </LoginContainer>
-      <footer></footer>
-    </>
+    <CardContainer>
+      <Row>
+        <Col>
+          <AuthContainer>
+            <AuthCard>
+              <Logo>
+                <Instagram fill="white"/>
+              </Logo>
+
+              <InputContainer>
+                <Input></Input>
+                <Input></Input>
+                <Buttons
+                  color="#fff"
+                  active="#0167ac"
+                  background="#0095f6"
+                  name="Iniciar Sesion"
+                  width="100%"
+                />
+              </InputContainer>
+            </AuthCard>
+            <AuthCard>
+              <InputContainer>
+                <p>Dont have an account?</p>
+              </InputContainer>
+            </AuthCard>
+          </AuthContainer>
+        </Col>
+      </Row>
+    </CardContainer>
   );
 }
 

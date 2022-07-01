@@ -23,7 +23,7 @@ import Avatars from "../Breadcrumbs/Avatars";
 function Card() {
   return (
     <CardContainer>
-      <CardContent>
+      <CardContent width={470}>
         <Row pl={10} pr={10}>
           <Col size="6">
             <Avatars size="md" bordered={true} />
