@@ -1,10 +1,10 @@
 import React from "react";
-import { NavButton } from "../../assets/Elements";
+import { Buttons } from "../../assets/Elements";
 function Button(props) {
   return (
-    <NavButton color={props.color} background={props.background}>
+    <Buttons width={props.width} color={props.color} background={props.background} active={props.active}>
       {props.name}
-    </NavButton>
+    </Buttons>
   );
 }
 export default Button;
