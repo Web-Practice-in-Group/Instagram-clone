@@ -1,6 +1,13 @@
 import React from "react";
+import { Inputs } from "../../assets/Elements";
 
 function Input(props) {
-  return <input type={props.type} name={props.name} placeholder={props.placeholder}/>;
+  return (
+    <Inputs
+      type={props.type}
+      name={props.name}
+      placeholder={props.placeholder}
+    />
+  );
 }
 export default Input;

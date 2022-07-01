@@ -84,7 +84,7 @@ export const InputContainer = styled.div`
   margin: auto 40px 6px;
 `;
 
-export const Input = styled.input`
+export const Inputs = styled.input`
   height: 36px;
   border: 1px solid #424242;
   border-radius: 3px;

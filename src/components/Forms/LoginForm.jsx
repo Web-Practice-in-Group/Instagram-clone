@@ -1,6 +1,7 @@
 import React from "react";
 import Instagram from "../Breadcrumbs/Icons/Instagram";
 import Buttons from "../Buttons/Button";
+import Input from "../Inputs/Input";
 
 import {
   CardContainer,
@@ -8,12 +9,11 @@ import {
   AuthContainer,
   Logo,
   InputContainer,
-  Input,
   Row,
   Col,
 } from "../../assets/Elements";
 
-function Login() {
+function LoginForm() {
   return (
     <CardContainer>
       <Row>
@@ -21,12 +21,22 @@ function Login() {
           <AuthContainer>
             <AuthCard>
               <Logo>
-                <Instagram fill="white"/>
+                <Instagram fill="white" />
               </Logo>
 
               <InputContainer>
-                <Input></Input>
-                <Input></Input>
+                <Input
+                  type="username"
+                  name="username"
+                  id="username"
+                  placeholder="Username"
+                ></Input>
+                <Input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Contraseña"
+                ></Input>
                 <Buttons
                   color="#fff"
                   active="#0167ac"
@@ -48,4 +58,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginForm;
