@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // *DarkMode
@@ -32,25 +32,16 @@ import {
   NavAction,
 } from "../../assets/Elements";
 
-function Navigation() {
-
-  const [mode, setMode] = useState();
-  const [background, setBackground] = useState();
-
-  if (mode === undefined) {
-    setMode("black");
-    setBackground("white");
-  }
-
+function Navigation({ theme, setTheme }) {
   return (
     <>
-      <NavContainer primary={background}>
+      <NavContainer>
         <Navbar>
           <Row border="transparent">
             <Col size="1">
               <NavLogo>
                 <Link to="/">
-                  <InstagramIcon fill={mode} />
+                  <InstagramIcon fill="white" />
                 </Link>
               </NavLogo>
             </Col>
@@ -61,20 +52,22 @@ function Navigation() {
             </Col>
             <Col size="2">
               <NavAction>
-                <HomeIcon color={mode} />
-                <MessageIcon color={mode} fill={mode} />
-                <NewIcon color={mode} />
-                <ModIcon color={mode} fill={mode} />
-                <LikeIcon fill={mode} />
-                <Avatars size="sm"/>
+                <HomeIcon color="white" />
+                <MessageIcon color="white" fill="white" />
+                <NewIcon color="white" />
+                <ModIcon color="white" fill="white" />
+                <LikeIcon fill="white" />
+                <Link to="/profile">
+                  <Avatars size="sm" />
+                </Link>
               </NavAction>
             </Col>
             <Col size="1" collapse="xs">
               <NavAction>
-                <DarkMode setMode={setMode} setBackground={setBackground} />
+                <DarkMode theme={theme} setTheme={setTheme} />
               </NavAction>
             </Col>
-            <Col size="5" collapse="md">
+            <Col size="6" collapse="md">
               <NavAction>
                 <Link to="/auth/login">
                   <Buttons

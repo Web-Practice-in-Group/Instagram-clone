@@ -6,7 +6,7 @@ Using Api web:
 https://jsonplaceholder.typicode.com/
 
 Beautiful, fast and modern React UI library:
-https://nextui.org/
+https://nextui.org/ and Styled-components
 
 Axios:
 How to import and use hooks;

@@ -10,6 +10,8 @@ import New from "./Icons/New";
 import Mod from "./Icons/Mod";
 import Send from "./Icons/Send";
 import Close from "./Icons/Close";
+import Moon from "./Icons/Moon";
+import Sun from "./Icons/Sun";
 
 export const CommentIcon = Comment;
 export const DotsIcon = Dots;
@@ -23,3 +25,5 @@ export const NewIcon = New;
 export const ModIcon = Mod;
 export const SendIcon = Send;
 export const CloseIcon = Close;
+export const MoonIcon = Moon;
+export const SunIcon = Sun;

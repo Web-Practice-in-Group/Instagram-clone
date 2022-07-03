@@ -17,23 +17,34 @@ import {
   SaveIcon,
 } from "../Breadcrumbs/Icons";
 
+
 import Avatars from "../Breadcrumbs/Avatars";
 
 function Card() {
+
   return (
     <CardContainer>
-      <CardContent width={470}>
-        <Row pl={10} pr={10} border="transparent">
-          <Col size="6">
-            <Avatars size="md" bordered={true} />
+      <CardContent width={470} background="black">
+        <Row pt={10} pl={10} pr={10} border="transparent">
+          <Col>
+            <Row border="transparent">
+              <Col>
+                <Avatars />
+              </Col>
+              <Col>
+                <h6>Jhon Doe</h6>
+                <br />
+                <p>jhondoe</p>
+              </Col>
+            </Row>
           </Col>
-          <Col size="50">Jhon Doe</Col>
           <Col>
             <DotsIcon fill="white" />
           </Col>
         </Row>
+
         <CardImage>
-          <Img src="https://conteudo.imguol.com.br/c/noticias/a2/2021/08/30/instagram-para-ios-iphone-1630359767684_v2_1x1.jpg" />
+          <Img src="https://picsum.photos/500?grayscale" />
         </CardImage>
         <Row pl={10} pr={10} border="transparent">
           <Col>
@@ -48,6 +59,11 @@ function Card() {
               <SaveIcon color="white" />
             </NavAction>
           </Col>
+        </Row>
+        <br />
+        <Row pl={10} pr={10} border="transparent">
+          <Col>hello</Col>
+          <Col></Col>
         </Row>
       </CardContent>
     </CardContainer>

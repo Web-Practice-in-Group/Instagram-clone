@@ -5,9 +5,9 @@ function Avatars(props) {
   return (
     <>
       <Avatar
-        bordered={props.bordered}
-        color="gradient"
-        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+        bordered={false}
+        color="#fff"
+        src="https://www.gravatar.com/avatar/bfcb1d6a22d7098499771d3bcec5a8c4?d=robohash&f=y&s=128"
         size={props.size}
       />
     </>

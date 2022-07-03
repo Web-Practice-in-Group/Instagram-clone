@@ -1,25 +1,21 @@
 import React from "react";
-import { useTheme as useNextTheme } from "next-themes";
-import { Switch, useTheme } from "@nextui-org/react";
+import { MoonIcon, SunIcon } from "../Breadcrumbs/Icons";
+import {Switch} from "../../assets/Elements";
 
-function DarkMode({ setMode, setBackground }) {
-  const ThemeChanger = () => {
-    const { setTheme } = useNextTheme();
-    const { isDark } = useTheme();
-
-    const handleChange = (e) => {
-      setTheme(e.target.checked ? "dark" : "light");
-      setMode(e.target.checked ? "white" : "black");
-      setBackground(e.target.checked ? "black" : "white");
-    };
-
-    return (
-      <div>
-        <Switch checked={isDark} onChange={handleChange} />        
-      </div>
-    );
+function DarkMode(props) {
+  const changeTheme = () => {
+    if (props.theme === "light") {
+      props.setTheme("dark");
+    } else {
+      props.setTheme("light");
+    }
   };
-
-  return <ThemeChanger />;
+  const icon =
+    props.theme === "light" ? (
+      <MoonIcon color="dark" fill="dark" />
+    ) : (
+      <SunIcon color="white" fill="white" />
+    );
+  return <Switch onClick={changeTheme}>{icon}</Switch>;
 }
 export default DarkMode;

@@ -1,5 +1,61 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  background: ${({ theme }) => theme.background};
+
+  h1 {
+    color: ${({ theme }) => theme.text};
+  }
+  h2 {
+    color: ${({ theme }) => theme.text};
+  }
+  h3 {
+    color: ${({ theme }) => theme.text};
+  }
+  h4 {
+    color: ${({ theme }) => theme.text};
+  }
+  h5 {
+    color: ${({ theme }) => theme.text};
+  }
+  h6 {
+    color: ${({ theme }) => theme.text};
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.fill};
+    color: ${({ theme }) => theme.color};
+  }
+`;
+
+// Themes
+const LightTheme = {
+  text: "#262626",
+  background: "#fff",
+  color: "#000",
+  fill: "#000",
+  navbar: "#fff",
+  border: "#e0e0e0",
+};
+
+const DarkTheme = {
+  text: "#fff",
+  background: "#262626",
+  color: "#fff",
+  fill: "#fff",
+  navbar: "#000",
+  border: "#424242",
+};
+
+export const Themes = {
+  light: LightTheme,
+  dark: DarkTheme,
+};
+
+export const ContainerRoutes = styled.div`
+  padding: 100px 0 0 0;
+`;
+
 export const Text = styled.p`
   font-size: ${(props) => props.size || "14px"};
   font-weight: ${(props) => props.weight || "bold"};
@@ -46,11 +102,11 @@ export const Col = styled.div`
 
 // Navbar
 export const NavContainer = styled.div`
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid ${({ theme }) => theme.border};
   position: fixed;
   padding: 10px;
   width: 100%;
-  background: ${(props) => (props.primary ? props.primary : "#fff")};
+  background: ${({ theme }) => theme.navbar};
   z-index: 1;
   &:before {
     position: absolute;
@@ -69,6 +125,10 @@ export const Navbar = styled.div`
 
 export const NavLogo = styled.div`
   padding-top: 15px;
+  path {
+    fill: ${({ theme }) => theme.fill};
+    color: ${({ theme }) => theme.color};
+  }
 `;
 export const NavSearch = styled.div`
   flex: ${(props) => props.size};
@@ -119,15 +179,12 @@ export const Inputs = styled.input`
   box-sizing: border-box;
 `;
 
-export const Container = styled.div`
-  padding: 100px 0 0 0;
-`;
-
 // Card
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 `;
 
 export const CardContent = styled.div`
@@ -136,7 +193,7 @@ export const CardContent = styled.div`
   height: auto;
   border-radius: 6px;
   padding: 2px 0 10px 0;
-  background: #000;
+  background: ${(props) => (props.background ? props.background : "#fff")};
 `;
 
 export const CardImage = styled.div`
@@ -188,66 +245,6 @@ export const Logo = styled.div`
   text-align: center;
   margin: 14.45px auto 12px;
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const FooterContent = styled.footer`
   order: 5;
@@ -347,7 +344,7 @@ export const FooterCopy = styled.div`
   align-items: stretch;
   align-content: stretch;
   display: flex;
-  `;
+`;
 // Modal
 export const Overlay = styled.div`
   width: 100vw;
@@ -392,4 +389,12 @@ export const Close = styled.div`
 // Content of modal
 export const ContentModal = styled.div`
   padding: 10px;
+`;
+
+export const Switch = styled.button`
+  margin-top: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.5s ease;
 `;

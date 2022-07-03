@@ -10,33 +10,7 @@ import { Provider } from "react-redux";
 import Routers from "./routers/Routers";
 
 //NextUI
-import { createTheme, NextUIProvider } from "@nextui-org/react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-
-// 2. Call `createTheme` and pass your custom values
-const lightTheme = createTheme({
-  type: "light",
-});
-
-const darkTheme = createTheme({
-  type: "dark",
-  theme: {
-    colors: {   // Custom colors
-      background: "#121212",
-
-      primaryLight: '#262626',
-      primaryLightHover: '#262626',
-      primaryLightActive: '#262626',
-      primaryLightContrast: '#262626',
-      primary: '#262626',
-      primaryBorder: '#262626',
-      primaryBorderHover: '#262626',
-      primarySolidHover: '#262626',
-      primarySolidContrast: '$white',
-      primaryShadow: '#262626',
-    },
-  },
-});
+import { NextUIProvider } from "@nextui-org/react";
 
 // Styles Scss
 import "./assets/globals.scss";
@@ -48,18 +22,9 @@ const store = Insta();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <NextThemesProvider
-      defaultTheme="system"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
-      }}
-    >
-      <NextUIProvider>
-        <Routers />
-      </NextUIProvider>
-    </NextThemesProvider>
+    <NextUIProvider>
+      <Routers />
+    </NextUIProvider>
   </Provider>
 );
 
