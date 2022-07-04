@@ -1,15 +1,19 @@
 import React from "react";
-import { Avatar } from "@nextui-org/react";
+
+import {
+  AvatarContainer,
+  AvatarCircle,
+  AvatarImage,
+} from "../../assets/Elements";
 
 function Avatars(props) {
   return (
     <>
-      <Avatar
-        bordered={false}
-        color="#fff"
-        src="https://www.gravatar.com/avatar/bfcb1d6a22d7098499771d3bcec5a8c4?d=robohash&f=y&s=128"
-        size={props.size}
-      />
+      <AvatarContainer width={props.width} height={props.height}>
+        <AvatarCircle>
+          <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+        </AvatarCircle>
+      </AvatarContainer>
     </>
   );
 }

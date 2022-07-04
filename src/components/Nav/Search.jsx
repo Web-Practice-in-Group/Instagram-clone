@@ -1,9 +1,18 @@
 import React from "react";
-
-import { Input } from "@nextui-org/react";
+import { SearchContainer, Row, Col } from "../../assets/Elements";
+import { SearchIcon } from "../Breadcrumbs/Icons";
 function Search() {
   return (
-    <Input clearable placeholder="Buscar" initialValue="" />
+    <SearchContainer>
+      <Row border="transparent">
+        <Col size="1">
+          <SearchIcon />
+        </Col>
+        <Col size="40">
+          <input type="text" placeholder="Buscar" />
+        </Col>
+      </Row>
+    </SearchContainer>
   );
 }
 export default Search;

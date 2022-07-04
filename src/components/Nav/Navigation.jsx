@@ -58,7 +58,7 @@ function Navigation({ theme, setTheme }) {
                 <ModIcon color="white" fill="white" />
                 <LikeIcon fill="white" />
                 <Link to="/profile">
-                  <Avatars size="sm" />
+                  <Avatars />
                 </Link>
               </NavAction>
             </Col>

@@ -6,6 +6,7 @@ import Followed from "../../components/Modals/Contents/Followed";
 
 import { ContentModal } from "../../assets/Elements";
 
+
 function ProfilePage() {
   const [stateModalFollowers, setStateModalFollowers] = useState(false);
   const [stateModalFollowed, setStateModalFollowed] = useState(false);

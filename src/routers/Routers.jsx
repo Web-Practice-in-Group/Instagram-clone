@@ -22,7 +22,7 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import { ThemeProvider } from "styled-components";
 
 function Routers() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   return (
     <ThemeProvider theme={Themes[theme]}>

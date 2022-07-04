@@ -29,7 +29,7 @@ function Card() {
           <Col>
             <Row border="transparent">
               <Col>
-                <Avatars />
+                <Avatars width={"3rem"} height={"3rem"}/>
               </Col>
               <Col>
                 <h6>Jhon Doe</h6>
@@ -61,10 +61,9 @@ function Card() {
           </Col>
         </Row>
         <br />
-        <Row pl={10} pr={10} border="transparent">
+        {/* <Row pl={10} pr={10} border="transparent">
           <Col>hello</Col>
-          <Col></Col>
-        </Row>
+        </Row> */}
       </CardContent>
     </CardContainer>
   );

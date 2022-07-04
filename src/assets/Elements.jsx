@@ -21,6 +21,9 @@ export const Container = styled.div`
   h6 {
     color: ${({ theme }) => theme.text};
   }
+  p {
+    color: ${({ theme }) => theme.text};
+  }
 
   svg {
     fill: ${({ theme }) => theme.fill};
@@ -32,19 +35,30 @@ export const Container = styled.div`
 const LightTheme = {
   text: "#262626",
   background: "#fff",
+  card: "#fff",
   color: "#000",
   fill: "#000",
   navbar: "#fff",
   border: "#e0e0e0",
+  modal: "#fff",
+  button: "#fff",
+  avatar: "#fff",
+  search: "#eee",
+
 };
 
 const DarkTheme = {
   text: "#fff",
-  background: "#262626",
+  background: "#121212",
+  card: "#000",
   color: "#fff",
   fill: "#fff",
   navbar: "#000",
   border: "#424242",
+  modal: "#252525",
+  button: "#fff",
+  avatar: "#000",
+  search: "#242424",
 };
 
 export const Themes = {
@@ -188,12 +202,12 @@ export const CardContainer = styled.div`
 `;
 
 export const CardContent = styled.div`
-  border: 1px solid #424242;
+  border: 1px solid ${({ theme }) => theme.border};
   width: ${(props) => props.width}px;
   height: auto;
   border-radius: 6px;
   padding: 2px 0 10px 0;
-  background: ${(props) => (props.background ? props.background : "#fff")};
+  background: ${({ theme }) => theme.card};
 `;
 
 export const CardImage = styled.div`
@@ -364,9 +378,12 @@ export const Overlay = styled.div`
 export const ModalContainer = styled.div`
   width: 440px;
   height: auto;
-  background: #262626;
+  background: ${({ theme }) => theme.modal};
   position: relative;
   border-radius: 10px;
+  button {
+    color: ${({ theme }) => theme.button};
+  }
 `;
 
 export const ModalText = styled.div`
@@ -397,4 +414,90 @@ export const Switch = styled.button`
   border: none;
   background: none;
   transition: all 0.5s ease;
+`;
+
+export const AvatarContainer = styled.span`
+  width: ${(props) => (props.width ? props.width : "1.7rem")};
+  height: ${(props) => (props.height ? props.height : "1.7rem")};
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+
+  overflow: hidden;
+  vertical-align: top;
+  cursor: pointer;
+  transition: transform 250ms ease 0ms, box-shadow 0.25s ease 0s;
+`;
+
+export const AvatarCircle = styled.span`
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #ffa95f 5%,
+    #f99c4a 15%,
+    #f47838 30%,
+    #e75157 45%,
+    #d92d7a 70%,
+    #cc2a92 80%,
+    #c32e92 95%
+  );
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  z-index: 200;
+  transition: box-shadow 0.25s ease 0s, opacity 0.25s ease 0s;
+  width: 100%;
+  height: 100%;
+`;
+
+export const AvatarImage = styled.img`
+  opacity: 1;
+  border-style: solid;
+  border-color: ${({ theme }) => theme.avatar};
+  border-radius: 50%;
+  border-width: 2px;
+  z-index: 300;
+
+  display: flex;
+  background: black;
+  transition: transform 250ms ease 0ms, opacity 200ms ease-in 0ms;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  img {
+    background-image: url(${(props) => props.src});
+  }
+`;
+
+// Search
+export const SearchContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 268px;
+  height: 36px;
+  border-radius: 8px;
+  background: ${({ theme }) => theme.search};
+
+  svg {
+    margin-top: 7px;
+    color: #929090;
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: ${({ theme }) => theme.text};
+  }
+
+  input::placeholder {
+    color: #929090;
+  }
 `;

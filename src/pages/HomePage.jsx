@@ -1,10 +1,10 @@
 import React from "react";
-
+import Card from "../components/Cards/Card";
 
 function HomePage() {
   return (
     <>
-      <h1>DarkMode</h1>
+      <Card/>
     </>
   );
 }
