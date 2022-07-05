@@ -67,7 +67,7 @@ function Navigation({ theme, setTheme }) {
                 <DarkMode theme={theme} setTheme={setTheme} />
               </NavAction>
             </Col>
-            <Col size="6" collapse="md">
+            <Col size="8" collapse="md">
               <NavAction>
                 <Link to="/auth/login">
                   <Buttons

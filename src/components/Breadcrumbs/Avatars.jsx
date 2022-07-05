@@ -11,7 +11,7 @@ function Avatars(props) {
     <>
       <AvatarContainer width={props.width} height={props.height}>
         <AvatarCircle>
-          <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+          <AvatarImage src="https://xsgames.co/randomusers/avatar.php?g=female" />
         </AvatarCircle>
       </AvatarContainer>
     </>

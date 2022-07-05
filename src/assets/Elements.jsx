@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.background};
+  padding-bottom: 20px;
 
   h1 {
     color: ${({ theme }) => theme.text};
@@ -24,10 +25,9 @@ export const Container = styled.div`
   p {
     color: ${({ theme }) => theme.text};
   }
-
   svg {
-    fill: ${({ theme }) => theme.fill};
-    color: ${({ theme }) => theme.color};
+    color: ${({ theme }) => theme.text};
+    fill: ${({ theme }) => theme.text};
   }
 `;
 
@@ -44,7 +44,8 @@ const LightTheme = {
   button: "#fff",
   avatar: "#fff",
   search: "#eee",
-
+  input: "#fff",
+  follow: "#000",
 };
 
 const DarkTheme = {
@@ -59,6 +60,8 @@ const DarkTheme = {
   button: "#fff",
   avatar: "#000",
   search: "#242424",
+  input: "#fff",
+  follow: "#fff",
 };
 
 export const Themes = {
@@ -129,6 +132,11 @@ export const NavContainer = styled.div`
   &:after {
     position: absolute;
   }
+
+  svg {
+    fill: ${({ theme }) => theme.fill};
+    color: ${({ theme }) => theme.color};
+  }
 `;
 
 export const Navbar = styled.div`
@@ -152,6 +160,17 @@ export const NavSearch = styled.div`
 export const NavAction = styled.div`
   display: flex;
   gap: 18px;
+  p {
+    font-size: 14px;
+    color: ${({ theme }) => theme.color};
+  }
+`;
+
+export const Comments = styled.div`
+  display: flex;
+  gap: ${(props) => (props.border ? props.gap : "10px")};
+  justify-content: center;
+  align-items: center;
 `;
 
 // Button
@@ -198,7 +217,9 @@ export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  svg {
+    color: ${({ theme }) => theme.color};
+  }
 `;
 
 export const CardContent = styled.div`
@@ -219,6 +240,35 @@ export const CardImage = styled.div`
 export const Img = styled.img`
   width: 100%;
   background: url(${(props) => props.src});
+`;
+
+export const Like = styled.div`
+  svg {
+    fill: #ed4956;
+  }
+`;
+
+export const CardComment = styled.div`
+  padding-top: 10px;
+  padding-bottom: 10px;
+`;
+
+export const CardHr = styled.hr`
+  border-top: 1px solid ${({ theme }) => theme.border};
+`;
+
+export const CarsLetter = styled.div`
+  p {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+`;
+
+export const CardInput = styled.input`
+  background-color: transparent;
+  border: none;
+  color: ${({ theme }) => theme.text};
 `;
 
 //Login
@@ -252,6 +302,9 @@ export const AuthCard = styled.div`
   border-radius: 1px;
   margin: 0 0 10px;
   padding: 10px 0;
+  input {
+    color: ${({ theme }) => theme.input};
+  }
 `;
 
 export const Logo = styled.div`
@@ -499,5 +552,56 @@ export const SearchContainer = styled.div`
 
   input::placeholder {
     color: #929090;
+  }
+`;
+
+//Profile
+export const ProfileContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 600px;
+  @media (max-width: 480px) {
+    display: relative;
+    flex-direction: column;
+  }
+`;
+
+export const Box = styled.div`
+  padding: 10px;
+  margin: 0 30px 0 30px;
+  flex-direction: column;
+`;
+
+export const BoxContainer = styled.div`
+  width: 400px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+  margin: 0;
+  color: ${({ theme }) => theme.text};
+  h2 {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  margin-top: ${(props) => (props.marginTop ? props.marginTop : "0")};
+  button {
+    color: ${({ theme }) => theme.follow};
+    justify-content: center;
+
+    &:active {
+      color: ${({ theme }) => theme.text};
+    }
+  }
+`;
+
+export const BoxText = styled.div`
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  button {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
   }
 `;

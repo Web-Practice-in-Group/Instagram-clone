@@ -19,6 +19,9 @@ import RegisterPage from "../pages/AuthPage/RegisterPage";
 // ?Profile
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
+//! Tests
+import Test from "../pages/Test/Test";
+
 import { ThemeProvider } from "styled-components";
 
 function Routers() {
@@ -33,6 +36,7 @@ function Routers() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="*" element={<NotFoundPage />} />
+              <Route path="/test" element={<Test />} />
               <Route path="/auth/login" element={<LoginPage />} />
               <Route path="/auth/register" element={<RegisterPage />} />
               <Route path="/profile" element={<ProfilePage />} />
