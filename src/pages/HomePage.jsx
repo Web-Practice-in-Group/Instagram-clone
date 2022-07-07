@@ -4,7 +4,9 @@ import Card from "../components/Cards/Card";
 import Api from "../utils/Api";
 
 function HomePage() {
-  const [post, setPost] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [photos, setPhotos] = useState([]);
+
 
   const getPosts = async () => {
     try {
@@ -13,13 +15,13 @@ function HomePage() {
         .then((res) => {
           // select 10 items
           const data = res.data.slice(0, 10);
-          // setPost(data);
-          return data;
+          setPosts(data);
         });
     } catch (error) {
       console.log(error);
     }
   };
+
   const getPhotos = async () => {
     try {
       Api()
@@ -27,30 +29,29 @@ function HomePage() {
         .then((res) => {
           // select 10 items
           const data = res.data.slice(0, 10);
-          setPost(data);
-          return data;
+          setPhotos(data);
         });
     } catch (error) {
       console.log(error);
     }
   };
 
-  console.log(post);
+  console.log(posts);
+  console.log(photos);
 
   useEffect(() => {
     getPosts();
     getPhotos();
-  }, [setPost]);
+  }, [setPosts, setPhotos]);
 
   return (
     <>
-      
-      {post.map((item) => (
+      {photos.map((item) => (
         // <div key={item.id}>
         //   <h1>{item.title}</h1>
         // </div>
         <>
-        <Card url={item.url}/>
+          <Card url={item.url} />
         </>
       ))}
     </>
